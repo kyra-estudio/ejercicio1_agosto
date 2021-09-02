@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>formulario</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                <div class="col-8">
+                    <form onsubmit=" return validarForm()">
+                        <div class="row mb-3">
+                          <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
+                          <div class="col-sm-6">
+                            <input type="text" class="form-control" id="nombre" onblur="validar('nombre')">
+                          </div>
+                          <div class="col-sm-4">
+                          <label  style="display: none; color: red;"  id="lblNombre">El campo nombre es obligatorio</label>
+                        </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="apellido" class="col-sm-2 col-form-label">Apellido:</label>
+                            <div class="col-sm-6">
+                              <input type="text" class="form-control" id="apellido">
+                            </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email:</label>
+                            <div class="col-sm-6">
+                              <input type="email" class="form-control" id="email" onblur="validar('email')" >
+                            </div>
+                            <div class="col-sm-4">
+                              <label  style="display: none; color: red;"  id="lblEmail">El campo Email es obligatorio</label>
+                              <label  style="display: none; color: red;"  id="lblEmailOK">Debe ser un correo válido</label>
+                            </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="password" class="col-sm-2 col-form-label">Password:</label>
+                            <div class="col-sm-6">
+                                <input type="password" id="password" class="form-control" aria-describedby="passwordHelpBlock" onblur="validar('password')">
+                            </div>
+                            <div class="col-sm-4">
+                              <label  style="display: none; color: red;"  id="lblPassword">El password debe tener min. 6 caracteres, mayúsculas, minúsculas y números</label>
+                            </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="comentarios" class="col-sm-2 col-form-label">Comentarios:</label>
+                            <div class="col-sm-6">
+                                <textarea class="form-control"  id="comentarios" onblur="validar('comentarios')"></textarea>
+                            </div>
+                            <div class="col-sm-4">
+                              <label  style="display: none; color: red;"  id="lblComentarios">El campo comentarios es obligatorio</label>
+                              <label  style="display: none; color: red;"  id="lblComentariosLength">El campo comentarios no puede contener más de 50 caracteres.</label>
+                            </div>
+                          </div>
+                                   
+                        
+                        <div class="row mb-3">
+                          <div class="col-sm-10 offset-sm-2">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="gridCheck1">
+                              <label class="form-check-label" for="gridCheck1">
+                                Acepto las condiciones del servicio.
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                      </form>
+                </div> 
+                </div>
+            </div>   
+        </div>
+      
+    </div>
+    
+    <script src="main.js"></script>
+  </body>
+</html>
